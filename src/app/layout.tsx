@@ -52,7 +52,7 @@ export default async function RootLayout({
               (function() {
                 try {
                   const root = document.documentElement;
-                  const defaultTheme = 'dark';
+                  const defaultTheme = 'system';
                   
                   // Set defaults from config
                   const config = ${JSON.stringify({
@@ -76,7 +76,7 @@ export default async function RootLayout({
                   // Resolve theme
                   const resolveTheme = (themeValue) => {
                     if (!themeValue || themeValue === 'system') {
-                      return defaultTheme;
+                      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
                     }
                     return themeValue;
                   };

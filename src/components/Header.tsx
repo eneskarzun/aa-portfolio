@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 import { Fade, Flex, Line, Row, ToggleButton } from "@once-ui-system/core";
 
-import { routes, display, person, about, blog, portfolio, certificate } from "@/resources";
+import { routes, display, person, about, blog, portfolio, certificate, home } from "@/resources";
 import { ThemeToggle } from "./ThemeToggle";
 import styles from "./Header.module.scss";
 
@@ -87,9 +87,26 @@ export const Header = () => {
           >
             <Row gap="4" vertical="center" textVariant="body-default-s" suppressHydrationWarning>
               {routes["/"] && (
-                <ToggleButton prefixIcon="home" href="/" selected={pathname === "/"} />
+                <>
+                  <Row s={{ hide: true }}>
+                    <ToggleButton
+                      prefixIcon="home"
+                      href="/"
+                      label={home.label}
+                      selected={pathname === "/"}
+                    />
+                  </Row>
+                  <Row hide s={{ hide: false }}>
+                    <ToggleButton
+                      prefixIcon="home"
+                      href="/"
+                      selected={pathname === "/"}
+                    />
+                  </Row>
+                </>
+                // <ToggleButton prefixIcon="home" href="/" selected={pathname === "/"} />
               )}
-              <Line background="neutral-alpha-medium" vert maxHeight="24" />
+              {/* <Line background="neutral-alpha-medium" vert maxHeight="24" /> */}
               {routes["/about"] && (
                 <>
                   <Row s={{ hide: true }}>

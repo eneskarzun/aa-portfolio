@@ -45,7 +45,7 @@ const social: Social = [
 
 const home: Home = {
   path: "/",
-  image: "/images/og/home.jpg",
+  image: "/images/avatar.JPG",
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my portfolio as a ${person.role}`,
@@ -211,8 +211,8 @@ const portfolio: Portfolio = {
 const certificate: Certificate = {
   path: "/certificate",
   label: "Certificate",
-  title: `Photo certificate – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
+  title: `Certificate – ${person.name}`,
+  description: `A certificate by ${person.name}`,
   // Images by https://lorant.one
   // These are placeholder images, replace with your own
   images: [

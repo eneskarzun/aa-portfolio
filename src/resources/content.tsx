@@ -6,7 +6,7 @@ const person: Person = {
   lastName: "Anas",
   name: `Aswar Anas`,
   role: "Flutter Developer | Software Engineer",
-  avatar: "/images/avatar.JPG",
+  avatar: "/images/avatar3.jpeg",
   email: "aswaranasmyid@gmail.com",
   location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: [], // optional: Leave the array empty if you don't want to display languages
